@@ -95,26 +95,24 @@
                                 <th>Peminjam</th>
                                 <th>Tanggal Pinjam</th>
                                 <th>Tanggal Kembali</th>
-                                <th>Catatan</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
-                                <td>61</td>
-                                <td>2011/04/25</td>
-                                <td>$320,800</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Accountant</td>
-                                <td>Tokyo</td>
-                                <td>63</td>
-                                <td>2011/07/25</td>
-                                <td>$170,750</td>
-                            </tr>
+                            <?php
+                            $no = 1;
+                            foreach ($peminjaman as $row) {
+                            ?>
+                                <tr>
+                                    <td><?= $no ?></td>
+                                    <td><?= $row['barang_id'] ?></td>
+                                    <td><?= $row['user_id'] ?></td>
+                                    <td><?= $row['tanggal_pinjam'] ?></td>
+                                    <td><?= $row['tanggal_kembali'] ?></td>
+                                </tr>
+                            <?php
+                                $no++;
+                            }
+                            ?>
                         </tbody>
                     </table>
                 </div>

@@ -40,6 +40,23 @@
             <!-- Divider -->
             <hr class="sidebar-divider mt-3">
 
+            <?php
+            foreach ($menu as $m) { ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?= base_url('admin/') . $m['menu'] ?>">
+                        <?= $m['icon'] ?>
+                        <span><?= $m['menu'] ?></span></a>
+                </li>
+            <?php
+            }
+            ?>
+
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('auth/logout') ?>">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span></a>
+            </li>
+
             <!-- Heading -->
             <div class="sidebar-heading">
                 Administrator

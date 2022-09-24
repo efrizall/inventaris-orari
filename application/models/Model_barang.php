@@ -6,4 +6,10 @@ class Model_barang extends CI_Model
         $query = $this->db->query('SELECT * FROM barang');
         return $query->num_rows();
     }
+
+    public function getPeminjaman()
+    {
+        $query = $this->db->get('peminjaman');
+        return $query->result_array();
+    }
 }

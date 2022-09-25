@@ -38,11 +38,6 @@ class Auth extends CI_Controller
         if ($user) {
             if ($user['is_active'] == 1) {
                 if (password_verify($password, $user['password'])) {
-                    $data = [
-                        'user' => $user['name'],
-                        'role_id' => $user['role_id']
-                    ];
-                    $this->session->set_userdata($data);
                     if ($user['role_id'] == 1) {
                         redirect('admin');
                     } elseif ($user['role_id'] == 2) {
@@ -67,7 +62,6 @@ class Auth extends CI_Controller
     public function register()
     {
         $data['title'] = 'ORARI | Register';
-
         $this->form_validation->set_rules('username', 'Call Sign', 'required|trim', [
             'required' => 'Call sign is required'
         ]);

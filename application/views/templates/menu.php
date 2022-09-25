@@ -40,22 +40,16 @@
             <!-- Divider -->
             <hr class="sidebar-divider mt-3">
 
-            <?php
-            foreach ($menu as $m) { ?>
+            <!-- <?php
+                    foreach ($menu as $m) { ?>
                 <li class="nav-item">
                     <a class="nav-link" href="<?= base_url('admin/') . $m['menu'] ?>">
                         <?= $m['icon'] ?>
                         <span><?= $m['menu'] ?></span></a>
                 </li>
             <?php
-            }
-            ?>
-
-            <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('auth/logout') ?>">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <span>Logout</span></a>
-            </li>
+                    }
+            ?> -->
 
             <!-- Heading -->
             <div class="sidebar-heading">
@@ -64,7 +58,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('user') ?>">
+                <a class="nav-link" href="<?= base_url($role) ?>">
                     <i class="fas fa-fw fa-home"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -79,15 +73,23 @@
 
             <!-- Nav Item - User -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('user') ?>/inventaris">
+                <a class="nav-link" href="<?= base_url($role) ?>/inventaris">
                     <i class="fas fa-fw fa-file"></i>
                     <span>Inventaris</span></a>
             </li>
             <!-- Nav Item - User -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('user') ?>/peminjaman">
+                <a class="nav-link" href="<?= base_url($role) ?>/peminjaman">
                     <i class="fas fa-fw fa-paperclip"></i>
                     <span>Peminjaman</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('auth/logout') ?>">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span></a>
             </li>
 
             <!-- Divider -->

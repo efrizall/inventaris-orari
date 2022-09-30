@@ -40,17 +40,6 @@
             <!-- Divider -->
             <hr class="sidebar-divider mt-3">
 
-            <!-- <?php
-                    foreach ($menu as $m) { ?>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url('admin/') . $m['menu'] ?>">
-                        <?= $m['icon'] ?>
-                        <span><?= $m['menu'] ?></span></a>
-                </li>
-            <?php
-                    }
-            ?> -->
-
             <!-- Heading -->
             <div class="sidebar-heading">
                 Administrator
@@ -266,7 +255,7 @@
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $user['name'] ?></span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
                                 <img class="img-profile rounded-circle" src="<?= base_url('assets/') ?>img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
